@@ -1,6 +1,4 @@
 import React from 'react';
-import RCSlider, { Range } from 'rc-slider';
-import 'rc-slider/assets/index.css';
 
 class Add extends React.Component {
     constructor(props) {
@@ -8,16 +6,19 @@ class Add extends React.Component {
         
         this.state = {
             input:'',
-            price:1 
+            price:1,
         };
+        this.input = React.createRef();
       }
+
     render () {
         return(
             <div>
-                <button>Add</button>
-                <input>{this.state.input}</input>
-                <RCSlider/>
-                
+                <button type="button" class="btn btn-outline-primary" >Add</button>
+                <label>
+                    <input type="text" ref={this.input} />
+                </label>
+                <input type="submit" value="Submit" />
             </div>
         );
     }

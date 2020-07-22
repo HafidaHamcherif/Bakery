@@ -4,13 +4,14 @@ import List from './components/List';
 import Pay from './components/Pay';
 import Add from './components/Add';
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       activeTab : 'add',
-      items : []
+      items : [],
     };
   }
 
@@ -45,5 +46,4 @@ class App extends React.Component {
   }
 }
  export default App;
-
 

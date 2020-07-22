@@ -1,10 +1,11 @@
 import React from 'react';
 
+
 class Pay extends React.Component {
     render () {
         return(
             <div>
-                <button>Pay</button>
+                <button type="button" class="btn btn-outline-primary">Pay</button>
             </div>
         );
     }
