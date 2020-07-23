@@ -6,7 +6,7 @@ class Slider extends React.Component {
     render () {
         return (
             <RCSlider
-            
+
             />
         );
     }

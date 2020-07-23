@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Add extends React.Component {
     constructor(props) {
         super(props);
@@ -8,17 +9,17 @@ class Add extends React.Component {
             input:'',
             price:1,
         };
-        this.input = React.createRef();
-      }
+    }
+
 
     render () {
+        console.log('Add/#render this.props', this.props)
         return(
             <div>
-                <button type="button" class="btn btn-outline-primary" >Add</button>
-                <label>
-                    <input type="text" ref={this.input} />
-                </label>
-                <input type="submit" value="Submit" />
+                add
+                <input className='form-control' placeholder= 'items'></input>
+                <button className='btn btn-primary'>Add</button>
+
             </div>
         );
     }

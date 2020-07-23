@@ -1,35 +1,16 @@
 import React from 'react';
 
 class List extends React.Component {
-    constructor(props) {
-        super(props);
-        
-        this.state = {
-            click : []
-        };
-      }
-    
-      onAction(){
-        const click =  this.state.click
-        click.push('No item are invalid')
-        this.setState({
-            clack:click
-        });
-    }
+
     render () {
+        console.log('List/#render this.props', this.props)
         return(
             <div>
-                <button type="button" class="btn btn-outline-primary"
-                    onClick={()=>{
-                        const click = this.state.click;
-                        click.push('No item are invalid')
-                        this.setState({
-                            click:click
-                        });
-                    }}>
-                        List
-                </button>
-                <p>{this.state.click}</p>
+                <ul className='list-group'>
+                    <li className='list-group-items'>croissant</li>
+                    <li className='list-group-items'>croissant</li>
+                    <li className='list-group-items'>croissant</li>
+                </ul>
             </div>
         );
     }

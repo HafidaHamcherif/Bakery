@@ -1,15 +1,15 @@
 import React from 'react';
 
-class Button extends React.Component {
-    render() {
-        return(
-            <div>
-                {this.props.children}
-                {this.props.isSelected}
-                {this.props.onClick}
-            </div>           
-        );
-    }
+const Button = (props) => {
+    console.log('Button/props',props);
+    return(
+        <button
+            className="btn btn-outline-primary mr-3"
+            onClick={props.onClick}>
+            {props.children}
+            {props.isSelected}
+            </button>
+    );
 }
-
+ 
 export default Button;
