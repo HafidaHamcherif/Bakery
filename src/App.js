@@ -43,7 +43,7 @@ class App extends React.Component {
     if(this.state.activeTab === 'add'){
       return(
         <Add
-          onadd={this.onAdd}
+
         />
       );
     }
