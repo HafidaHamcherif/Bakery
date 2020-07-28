@@ -1,4 +1,5 @@
 import React from 'react';
+import Slider from './core/Slider'
 
 
 class Add extends React.Component {
@@ -7,19 +8,36 @@ class Add extends React.Component {
         
         this.state = {
             input:'',
-            price:1,
+            price: 6
+
         };
+        this.sliderChange=this.sliderChange.bind(this);
+    }
+
+    sliderChange(price){
+        console.log('sliderChange price', price)
+        this.setState({
+            price
+        });
     }
 
 
     render () {
-        console.log('Add/#render this.props', this.props)
+        const {
+            price
+        } = this.state;
         return(
             <div>
-                add
-                <input className='form-control' placeholder= 'items'></input>
+                <input className='form-control' placeholder= 'items'>
+                    
+                </input>
                 <button className='btn btn-primary'>Add</button>
-
+                <Slider
+                    min = {1}
+                    max = {10}
+                    sliderChange = {this.sliderChange}
+                    value = {price}
+                />
             </div>
         );
     }

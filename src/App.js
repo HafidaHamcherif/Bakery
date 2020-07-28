@@ -6,7 +6,6 @@ import Add from './components/Add';
 import Button from './components/core/Button';
 
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -42,9 +41,7 @@ class App extends React.Component {
   renderTabAdd(){
     if(this.state.activeTab === 'add'){
       return(
-        <Add
-          onadd={this.onAdd}
-        />
+        <Add />
       );
     }
     return null;
@@ -68,27 +65,30 @@ class App extends React.Component {
     return null;
   }
   
-  onAdd(price, input){
-    
-  }
+
 
   render () {
+
     return(
-      <div className='container-fluid'>
-        <div className='row'>
-          <Button children='Add'
-            onClick={this.onClickTabAdd}
-          />
-          <Button children='List'
-            onClick={this.onClickTabList}/>
-          <Button children='Pay'
-            onClick={this.onClickTabPay}
-          />
+      <div className="container-fluid">
+        <div className="row">
+          <div className = "col">
+            <Button
+              onClick={this.onClickTabAdd}
+            >Add</Button>
+            <Button
+              onClick={this.onClickTabList}>List</Button>
+            <Button 
+              onClick={this.onClickTabPay}
+            >Pay</Button>
+          </div>
         </div>
         <div className='row'>
-          {this.renderTabAdd()}
-          {this.renderTabList()}
-          {this.renderTabPay()}
+          <div className = "col">
+            {this.renderTabAdd()}
+            {this.renderTabList()}
+            {this.renderTabPay()}
+          </div>
         </div>
       </div>
 

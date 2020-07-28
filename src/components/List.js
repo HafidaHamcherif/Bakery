@@ -7,9 +7,7 @@ class List extends React.Component {
         return(
             <div>
                 <ul className='list-group'>
-                    <li className='list-group-items'>croissant</li>
-                    <li className='list-group-items'>croissant</li>
-                    <li className='list-group-items'>croissant</li>
+                    <li className='list-group-items'></li>
                 </ul>
             </div>
         );
